@@ -1,0 +1,1 @@
+X,Y,Unique Squirrel ID,Shift,Date,Age,Primary Fur Color,Location,Specific Location,Running,Chasing,Climbing,Eating,Foraging,Other Activities,Kuks,Quaas,Moans,Tail flags,Tail twitches,Approaches,Indifferent,Runs from
