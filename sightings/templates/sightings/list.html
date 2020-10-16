@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang='en'>
+        <head>
+                <title>Squirrel Tracker: List of Squirrel Sightings</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        </head>
+        <body>
+<style>
+      body {
+        padding-left: 10px; padding-right: 10px;
+      }
+</style>
+		<p>
+		<br>
+		<strong><h2> <img src="https://image.flaticon.com/icons/svg/2291/2291277.svg" style="width:60px" class="rounded" alt="..." >    Welcome to the World of Squirrels: Squirrel Tracker!    <img src="https://image.flaticon.com/icons/svg/2291/2291277.svg" style="width:60px" class="roun
+ded" alt="..." ></strong></h2>
+		<hr>
+		</p>
+		<p>
+		<ul>
+			<h5><li><a href="/map/" class="badge badge-primary">MAP</a> Click the button to view the squirrel tracking map.</li></h5>
+			<h5><li><a href="stats/" class="badge badge-info">STATS</a> Click the button to look at some descriptive statistics.</li></h5>
+			<h5><li><a href="add/"  class="badge badge-warning">ADD</a> Did you see a squirrel? Click the button to add a new squirrel sighting.</li></h5>
+		</ul>
+		</p>
+		<br>
+		<div>
+                <table class="table">
+			<div class="alert alert-dark text-center" role="alert">
+				<h5><strong> Overview: Squirrel Sighting Records </strong></h5>
+			</div>
+			<thead class = "thead-dark">
+                                <tr>
+                                        <th scope = "col">Unique Squirrel Id</th>
+                                        <th scope = "col">Longitude</th>
+                                        <th scope = "col">Latitude</th>
+                                        <th scope = "col">Date</th>
+                                        <th scope = "col">Shift</th>
+                                </tr>
+                        </thead>
+
+                        <tbody>
+                        {% for sight in sights %}
+                                <tr>
+                                        <td><a href="{{sight.Unique_Squirrel_Id}}/">{{ sight.Unique_Squirrel_Id }}</a></td>
+                                        <td>{{ sight.Longitude }}</td>
+                                        <td>{{ sight.Latitude }}</td>
+                                        <td>{{ sight.Date }}</td>
+                                        <td>{{ sight.Shift }}</td>
+                                </tr>
+                        {% endfor %}
+                        </tbody>
+                </table>
+		</div>
+		<br>
+		<br>
+		<div style=font-size:12px>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        </body>
+</html>

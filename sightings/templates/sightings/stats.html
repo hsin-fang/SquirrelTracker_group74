@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Squirrel Tracker: Statistics Overview </title> 
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        </head>
+        <body>
+<style>
+      body {
+        padding-left: 10px; padding-right: 10px;
+      }
+</style>
+
+		<p>
+		<br>
+		<strong><h2>  <img src="https://image.flaticon.com/icons/svg/2077/2077173.svg" style="width:60px" class="rounded" alt="..." >       Squirrel Tracker: Statistics Overview       <img src="https://image.flaticon.com/icons/svg/2077/2077173.svg" style="width:60px" class="rounded" alt="..." ></h2></strong>
+		<hr>
+		<ul>
+			<br>
+			<li>There are <strong>{{context.Total}}</strong>  <img src="https://image.flaticon.com/icons/svg/570/570656.svg" style="width:40px" class="rounded" alt="..." ><img src="https://image.flaticon.com/icons/svg/570/570656.svg" style="width:40px" class="rounded" alt="..." ><img src="https://image.flaticon.com/icons/svg/570/570656.svg" style="width:40px" class="rounded" alt="..." >  sightings in our records.</li>
+		<br>
+		<li>The following statistics do not include unknown and missing tracking records.</li>
+		</ul>
+		</p>
+		<br>
+		<br>
+                <div>
+                        <table class='table' id="shift_table" style="width: 700px">
+				<div class="alert alert-danger text-center" style="width: 700px" role="alert">
+					<h5><strong> Counts of squirrel sightings in each shift </strong></h5>
+                                </div>
+                                <thead class="thead-dark">
+                                         <tr>
+                                                 <th scope='col'></th>
+                                                 <th scope='col'>AM</th>
+                                                 <th scope='col'>PM</th>
+                                         </tr>
+                                 </thead>
+                                 <tbody>
+                                         <tr>
+                                                 <th>Shift</th>
+                                                 <td>{{context.Shift.AM}}</td>
+                                                 <td>{{context.Shift.PM}}</td>
+                                         </tr>
+                                         <tr>
+                                                 <th>percentage %</th>
+                                                 <td>{{context.Shift_pct.AM}}</td>
+                                                 <td>{{context.Shift_pct.PM}}</td>
+                                         </tr>
+                                 </tbody>
+                         </table>
+                </div>
+		<br>
+		<br>
+                <div>
+                         <table class="table" id="age_table" style="width: 700px">
+				 <div class="alert alert-success text-center" style="width: 700px" role="alert">
+                                        <h5><strong> Counts of juvenile and adult squirrels </strong></h5>
+                                </div>
+				 <thead class="thead-dark">
+                                         <tr>
+                                                 <th scope='col'></th>
+                                                 <th scope='col'>Juvenile</th>
+                                                 <th scope='col'>Adult</th>
+                                         </tr>
+                                         </thead>
+                                 <tbody>
+                                         <tr>
+                                                 <th>Age</th>
+                                                 <td>{{context.Age.Juvenile}}</td>
+                                                 <td>{{context.Age.Adult}}</td>
+                                         </tr>
+                                         <tr>
+                                                 <th>percentage %</th>
+                                                 <td>{{context.Age_pct.Juvenile}}</td>
+                                                 <td>{{context.Age_pct.Adult}}</td>
+                                         </tr>
+                                 </tbody>
+                         </table>
+                </div>
+		<br>
+		<br>
+                <div>
+			<table class='table' id="color_table"  style="width: 700px">
+				<div class="alert alert-info text-center" style="width: 700px" role="alert">
+                                        <h5><strong> Counts of squirrels in different colors </strong></h5>
+                                </div>
+                                <thead class="thead-dark">
+                                         <tr>
+                                                 <th scope='col'></th>
+                                                 <th scope='col'>Black</th>
+                                                 <th scope='col'>Gray</th>
+                                                 <th scope='col'>Cinnamon</th>
+                                         </tr>
+                                 </thead>
+                                 <tbody>
+                                         <tr>
+                                                 <th>Primary fur color</th>
+                                                 <td>{{context.Primary_Fur_Color.Black}}</td>
+                                                 <td>{{context.Primary_Fur_Color.Gray}}</td>
+                                                 <td>{{context.Primary_Fur_Color.Cinnamon}}</td>
+                                         </tr>
+                                         <tr>
+                                                 <th>percentage %</th>
+                                                 <td>{{context.Primary_Fur_Color_pct.Black}}</td>
+                                                 <td>{{context.Primary_Fur_Color_pct.Gray}}</td>
+                                                 <td>{{context.Primary_Fur_Color_pct.Cinnamon}}</td>
+                                         </tr>
+                                 </tbody>
+                         </table>
+                </div>
+		<br>
+		<br>
+                <div>
+                         <table class='table' id="location_table" style="width: 700px">
+				 <div class="alert alert-warning text-center" style="width: 700px" role="alert">
+                                        <h5><strong> Counts of squirrels in different locations </strong></h5>
+                                </div>
+				 <thead class="thead-dark">
+                                         <tr>
+                                                 <th scope='col'></th>
+                                                 <th scope='col'>Above_Ground</th>
+                                                 <th scope='col'>Ground_Plane</th>
+                                         </tr>
+                                 </thead>
+                                 <tbody>
+                                         <tr>
+                                                 <th>Location</th>
+                                                 <td>{{context.Location.Above_Ground}}</td>
+                                                 <td>{{context.Location.Ground_Plane}}</td>
+                                         </tr>
+                                         <tr>
+                                                 <th>percentage %</th>
+                                                 <td>{{context.Location_pct.Above_Ground}}</td>
+                                                 <td>{{context.Location_pct.Ground_Plane}}</td>
+                                         </tr>
+                                 </tbody>
+                         </table>
+                </div>
+		<br>
+		<br>
+                <div>
+			<table class='table' id="runfrom_table" style="width: 700px">
+				<div class="alert alert-primary text-center" style="width: 700px" role="alert">
+					<h5><strong> Counts of squirrels that run from people </strong></h5>
+				</div>
+				<thead class="thead-dark">
+					 <tr>
+						 <th scope='col'></th>
+						 <th scope='col'>True</th>
+						 <th scope='col'>False</th>
+					 </tr>
+				 </thead>
+				 <tbody>
+					 <tr>
+						 <th>Run from people</th>
+						 <td>{{context.Runs_From.True}}</td>
+						 <td>{{context.Runs_From.False}}</td>
+					 </tr>
+					 <tr>
+						 <th>percentage %</th>
+						 <td>{{context.Runs_From_pct.True}}</td>
+						 <td>{{context.Runs_From_pct.False}}</td>
+					 </tr>
+				 </tbody>
+			 </table>
+                </div>
+		<br>
+		<br>
+		<div style=font-size:12px>Icons made by <a href=" " title="Freepik">Freepik</a > from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a >
+		</div>
+        </body>
+</html>
