@@ -65,7 +65,7 @@ def stats_view(request):
     # shift
     AM_n = sights.filter(Shift='AM').count()
     PM_n = sights.filter(Shift='PM').count()
-    AM_pct = AM_n/(AM_n + PM_n)
+    AM_pct = AM_n/(AM_n + PM_n )
     AM_pct = "{:.2%}".format(AM_pct)
     PM_pct = PM_n/(AM_n + PM_n)
     PM_pct = "{:.2%}".format(PM_pct)
