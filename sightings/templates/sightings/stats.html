@@ -46,10 +46,10 @@
  <div>
 			<ul class='table' id="runfrom_table" style="width: 700px">
            <div class="alert alert-warning text-center" style="width: 700px" role="alert">
-                                        <h5><strong> Counts of squirrels in different colors </strong></h5>
+                                        <h5><strong> Percentage of Squirrel Color </strong></h5>
                                 </div>
              <div class="alert alert-warning text-center" style="width: 700px" role="alert">
-                                        <h5><strong> Counts of squirrels in different colors </strong></h5>
+                                        <h5><strong> Percentage of Squirrel Color </strong></h5>
                                 </div>
                                 
                                  <tbody>
@@ -65,7 +65,7 @@
                                              <th scope='col'>Cinnamon</th>
                                                  <td>{{context.Primary_Fur_Color.Cinnamon}}</td>   <br/>
                                          </tr>
-                                         <tr>
+                                         <tr>  <br/>
                                                  <th>percentage %</th> <br/>
                                              <th scope='col'>Black</th>
                                                  <td>{{context.Primary_Fur_Color_pct.Black}}</td>  <br/>
@@ -82,7 +82,7 @@
                 <div>
                          <ul class='table' id="location_table" style="width: 700px">
 				 <div class="alert alert-warning text-center" style="width: 700px" role="alert">
-                                        <h5><strong> Counts of squirrels in different locations </strong></h5>
+                                        <h5><strong> Percentage of Squirrel Location </strong></h5>
                                 </div>
 				 <thead class="thead-dark">
                                          <tr>
@@ -105,20 +105,20 @@
                 <div>
 			<ul class='table' id="runfrom_table" style="width: 700px">
 				<div class="alert alert-primary text-center" style="width: 700px" role="alert">
-					<h5><strong> Counts of squirrels that run from people </strong></h5>
+					<h5><strong> Percentage of Squirrel that Run From people </strong></h5>
 				</div>
 				<thead class="thead-dark">
 					 <tr>
 						 <th scope='col'></th>
-						 <th scope='col'>True</th>
-						 <th scope='col'>False</th>
 					 </tr>
 				 </thead>
 				 <tbody>
 					 <tr>
 						 <th>Run from people</th>  <br/>
-						 <td>{{context.Runs_From.True}}</td>
-                     <td>{{context.Runs_From_pct.True}}</td>  <br/>    
+                         <th scope='col'>True</th>
+						 <td>{{context.Runs_From.True}}</td> 
+                     <td>{{context.Runs_From_pct.True}}</td>  <br/>   
+                          <th scope='col'>False</th>
 						 <td>{{context.Runs_From.False}}</td> 
                        <td>{{context.Runs_From_pct.False}}</td>  <br/>  
 				 </tbody>
