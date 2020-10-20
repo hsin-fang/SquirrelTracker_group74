@@ -21,6 +21,6 @@ e. /sightings/: A form to update an existing squirrel
 
 Group name and section:Project Group 74, Section 1
 
-Group Members: UNIs: jy3100 & 
+Group Members: UNIs: jy3100 & hw2796
 
 App link: http://35.220.158.148:80/
